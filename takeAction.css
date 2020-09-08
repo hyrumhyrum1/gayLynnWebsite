@@ -165,6 +165,7 @@ body{
     justify-content: center;
     width: 95vw;
     align-self: center;
+    margin-top: 10vh;
 }
 .titleWrapper img{
     max-width: 100%;
@@ -257,6 +258,7 @@ hr{
     align-items: stretch;
     justify-content: space-around;
     flex-direction: row;
+    padding-bottom: 10vh;
 }
 
 .card{

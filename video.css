@@ -3,7 +3,9 @@
 /*Importing the font*/
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 
-
+body{
+    font-family: "Poppins"
+}
 /*Building the Nav*/
 nav{
     display: flex;
@@ -215,173 +217,6 @@ nav img{
 	
 }
 
-
-
-
-/*PAGE STYLING*/
-
-/*Section A*/
-body{
-    font-family: "Poppins"
-}
-
-.textStuff{
-    
-    z-index: 100;
-    position: absolute;
-    font-size: 24px;
-    left: 150px;
-    top: 350px;
-      
-}
-.section_a{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 90vw;
-    
-}
-
-.section_a img{
-    position: relative;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 90%;
-    margin-top: 5vh;
-    margin-bottom: 5vh;
-    border-radius: 3px;
-    box-shadow: 0 1.4rem 8rem rgba(59, 99, 163, 0.2);
-    z-index: -1;
-
-}
-
-/*Section B*/
-.section_b{
-    position: relative;
-    background: url('landing_page_assets/section_b.JPG') no-repeat bottom center/cover;
-    height: 800px;
-    width: 85vw;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 5vh;
-}
-
-
-.overlay{
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    color: white;
-}
-/*ABOUT SECTION*/
-.about_container{
-    display: flex;
-    width: 90vw;
-    letter-spacing: normal;
-    justify-content: space-evenly;
-}
-.left{
-    width: 65%;
-    margin-left: 2vw;
-    margin-right: 2vw;
-}
-.right{
-    width: 35%;
-    justify-content: center;
-    align-items: center;
-}
-.right img{
-    max-width: 99%;
-    border-radius: 4px;
-    text-align: center;
-}
-
-.left p{
-    font-size: 2.5rem;
-    text-align: left;
-    margin-left: 2vw;
-}
-
-.left h3{
-    letter-spacing: .23em;
-    color: #C23B3B;
-    font-weight: 1500;
-}
-
-/*MAIN MEDIA QUERYS*/
-@media screen and (max-width: 1700px){
-    .left{
-        width: 60%;
-    }
-    .right{
-        width: 40%
-    }
-}
-@media screen and (max-width: 1500px){
-    .left{
-        width: 50%;
-        font-size: 2.5rem;
-    }
-    .left p{
-        font-size: 2rem;
-    }
-    .right{
-        width: 50%
-    }
-    .title__button{
-        transform: scale(.9);
-        font-size: 1.5rem;
-    }
-}
-@media screen and (max-width: 1300px){
-    .left p{
-        font-size: 1.5rem;
-    }
-    .button__div{
-        display:flex;
-        flex-direction:row;
-    }
-    .title__button{
-        width:50%;
-    }
-}
-
-@media screen and (max-width: 1100px){
-    .about_container{
-        display: flex;
-        flex-direction: column;
-    }
-
-    .left{
-        width: 100%;
-    }
-    .left p{
-        margin-right: 2vw;
-    }
-    .right{
-        width: 100%;
-    }
-    .right img{
-        max-height: 1000px;
-        margin-top: 3vh;
-    }
-}
-
-
-/*SUBTITLE*/
-.section_a_sub{
-    margin-top: 2vh;
-    text-align: center;
-    font-size: 3rem;
-    margin-bottom: 0px;
-    letter-spacing: 1.05rem;
-    padding-bottom: 0px;
-}
-
 .subhr{
     width: 35vw;
     border: 0; 
@@ -395,57 +230,75 @@ body{
 
 }
 
+/*BUILDING THE CARDS*/
 
-/*JOIN US CARDS*/
 .main__container{
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
-    align-items: stretch;
-    justify-content: space-around;
+    align-items: center;
+    justify-content: center;
     flex-direction: row;
 }
 
 .card{
-    width: 25%;
+    width: 70%;
+    height: 45vh;
     margin: 2rem;
-    margin-top: 8rem;
+    padding: 2rem;
     background-color: #fff;
     box-shadow: 0 1.4rem 8rem rgba(59, 99, 163, 0.2);
-    padding: 2rem;
     transition: all .2s ease-in-out;
-    z-index: -1;
-    margin-bottom: 10vh;
+    display: flex;
+    flex-direction: row;
+    align-items: space-between;
 }
 
-.card:hover{
-    transform: scale(1.22)
+.card .video{
+    width: 60%;
 }
 
-
-.image img{
-    max-width: 23vw;
-    height: auto;
-    border-radius: 5px;
-    transform: translate(.5rem, -3.5rem);
-    box-shadow: .5rem .5rem 3rem 1px rgba(0, 0, 0, .3);
-    margin-bottom: 0;
+.card .cardtextbox{
+    width: 40%;
 }
 
-.card h2{
-    margin-top: 0;
+.card .video{
+    position: relative;
+    width: 100%; 
+  }
+  .card .video iframe{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 90%;
+    height: 100%;
+  }
+
+
+  /*BUILDING THE WEBSITE TITLE*/
+.titleWrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 95vw;
+    height: 35vh;
+    align-self: center;
 }
 
-.card hr{
-    margin-top: 0
+.titleWrapper p{
+    display: flex;
+    align-self: center;
+    line-height: .1vh;
+
 }
 
-.card__title{
-    font-size: 1.5rem;
-}
-
-.card__text{
-    font-size: 1.3rem;
-    font-family: "freight-text-pro", "Poppins";
+.firstName{
+    font-size: 10vw;
+    margin: 8vh;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    letter-spacing: 1.5vw;
+    
 }
 
 .post__button{
@@ -460,76 +313,3 @@ body{
     text-decoration: none;
     transition: all 0.2s ease-in-out;
 }
-.title__button{
-    display: inline-block;
-    padding: 2rem 2.5rem;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    font-size: 2rem;
-    color: #fff;
-    background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 75%);
-    border-radius: 1rem;
-    text-decoration: none;
-    transition: all 0.2s ease-in-out;
-    border: none;
-    cursor: pointer;
-    margin: 2vw;
-}
-
-.title__button:hover{
-    transform: scale(1.05)
-}
-
-@media screen and (max-width: 768px){
-    .aboutgaylynn h2{
-        font-size: 2.5rem;
-        letter-spacing: .22em;
-    }
-
-    .title__button{
-        font-size: 1rem;
-    }
-
-    .left h3{
-        font-size: 2rem;
-        margin-left: 4vw;
-        margin-right: 4vw;
-    }
-
-    .left p{
-        font-size: 1.25rem;
-        margin-left: 5vw;
-        margin-right: 5vw;
-    }
-    .main__container{
-        display:flex;
-        flex-direction: column;
-    }
-
-    .card{
-        display: block;
-        width: 50%;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    .image img{
-        max-width: 45vw;
-        height: auto;
-        border-radius: 5px;
-        transform: translate(.5rem, -3.5rem);
-        box-shadow: .5rem .5rem 3rem 1px rgba(0, 0, 0, .3);
-        margin-bottom: 0;
-    }
-    .sub_headings h1{
-        margin-top: 10vh;
-        font-size: 2.5rem;
-    }
-}
-
-@media screen and (max-width: 548px){
-    .right img{
-        width: 85vw;
-    }
-}
-
-

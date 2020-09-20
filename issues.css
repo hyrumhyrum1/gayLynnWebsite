@@ -410,3 +410,17 @@ hr{
     }
 }
 
+/*JUMP TO STYLING*/
+.jumpto{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 7vh;
+    overflow: hidden;
+}
+
+.jumpto .post__button{
+    flex-shrink: 2;
+    font-size: .8rem;
+
+}
